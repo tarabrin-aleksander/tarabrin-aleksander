@@ -18,12 +18,12 @@ var (
 		</div>  
 	</a>`
 	templateWrap = `
-		<div class="col-md-6">
+		'<div class="col-md-6">
 			%s
 		</div>
 		<div class="col-md-6">
 			%s
-		</div>`
+		</div>'`
 )
 
 func main() {
@@ -32,6 +32,7 @@ func main() {
 		fmt.Errorf("directory is empty")
 		return
 	}
+	fmt.Println(directory)
 	files, err := ioutil.ReadDir(*directory)
 	if err != nil {
 		log.Fatal(err)
